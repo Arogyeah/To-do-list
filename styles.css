@@ -1,0 +1,140 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  color: #333;
+}
+
+.todo-container {
+  background: #fff;
+  width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  padding: 30px 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: #4b3f72;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.input-section {
+  display: flex;
+  gap: 15px;
+}
+
+#taskInput {
+  flex-grow: 1;
+  padding: 15px 20px;
+  font-size: 16px;
+  border: 2px solid #764ba2;
+  border-radius: 50px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#taskInput:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.7);
+}
+
+#addTaskBtn {
+  background: #764ba2;
+  border: none;
+  color: white;
+  font-size: 28px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(118, 75, 162, 0.6);
+  transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+#addTaskBtn:hover {
+  background: #5a347e;
+  transform: scale(1.1);
+}
+
+#taskList {
+  list-style: none;
+  padding-left: 0;
+  max-height: 320px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Scrollbar for task list */
+#taskList::-webkit-scrollbar {
+  width: 8px;
+}
+#taskList::-webkit-scrollbar-thumb {
+  background: #764ba2;
+  border-radius: 10px;
+}
+#taskList::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.task-item {
+  background: #f7f5fc;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(118, 75, 162, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+.task-item:hover {
+  background-color: #e2d9f7;
+  transform: translateX(5px);
+}
+
+.task-item.completed {
+  background: #cde7d1;
+  color: #4b6043;
+  text-decoration: line-through;
+  font-weight: 600;
+}
+
+.task-item button {
+  background: transparent;
+  border: none;
+  color: #e94e77;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.task-item button:hover {
+  color: #b53056;
+}
